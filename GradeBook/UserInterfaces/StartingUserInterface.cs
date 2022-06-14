@@ -58,7 +58,7 @@ namespace GradeBook.UserInterfaces
 
             BaseGradeBook gradeBook;
 
-            if(type == "Standard")
+            if(type == "standard")
             {
                 gradeBook = new StandardGradeBook(name);
             }
