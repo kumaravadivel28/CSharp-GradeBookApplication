@@ -19,7 +19,7 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
 
-            var percentRequired = Students.Count * (20 / 100);
+            var percentRequired = (int)Math.Ceiling(Students.Count * 0.2);
             var studentGrades = Students.OrderByDescending(i => i.AverageGrade).Select(i => i.AverageGrade).ToList();
 
             if(averageGrade >= studentGrades[percentRequired - 1])
